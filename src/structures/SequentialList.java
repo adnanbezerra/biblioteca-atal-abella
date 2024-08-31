@@ -1,11 +1,11 @@
 package structures;
 
-public class List<T> {
+public class SequentialList<T> {
     private T[] items;
     private int size;
 
     @SuppressWarnings("unchecked")
-    public List() {
+    public SequentialList() {
         this.items = (T[]) new Object[10];
         this.size = 0;
     }
