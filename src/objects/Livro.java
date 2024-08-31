@@ -22,4 +22,8 @@ public class Livro {
     public String getAnoPublicação() {
         return anoPublicação;
     }
+
+    public String toString() {
+        return "Título: " + título + "\nAutor: " + autor + "\nAno de publicação: " + anoPublicação;
+    }
 }
