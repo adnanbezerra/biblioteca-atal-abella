@@ -1,18 +1,18 @@
 package objects;
 
 public class Livro {
-    String título;
+    String titulo;
     String autor;
     String anoPublicação;
 
-    public Livro(String título, String autor, String anoPublicação) {
-        this.título = título;
+    public Livro(String titulo, String autor, String anoPublicação) {
+        this.titulo = titulo;
         this.autor = autor;
         this.anoPublicação = anoPublicação;
     }
 
-    public String getTítulo() {
-        return título;
+    public String getTitulo() {
+        return titulo;
     }
 
     public String getAutor() {
@@ -24,6 +24,6 @@ public class Livro {
     }
 
     public String toString() {
-        return "Título: " + título + "\nAutor: " + autor + "\nAno de publicação: " + anoPublicação;
+        return "Título: " + titulo + "\nAutor: " + autor + "\nAno de publicação: " + anoPublicação;
     }
 }
