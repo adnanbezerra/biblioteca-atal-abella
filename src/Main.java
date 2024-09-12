@@ -1,6 +1,5 @@
 import java.util.Scanner;
 import objects.Livro;
-import structures.BubbleSort;
 import structures.SequentialList;
 
 class Main {
@@ -72,9 +71,7 @@ class Main {
     private static void ordenarLivros(SequentialList<Livro> livros) {
         System.out.println("Ordenando livros...");
 
-        BubbleSort bubbleSort = new BubbleSort();
-
-        livros = bubbleSort.bubbleSort(livros);
+        livros = livros.ordenar();
 
         System.out.println("Livros ordenados:");
 

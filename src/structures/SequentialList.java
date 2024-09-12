@@ -1,5 +1,7 @@
 package structures;
 
+import objects.Livro;
+
 public class SequentialList<T> {
     private T[] items;
     private int size;
@@ -34,5 +36,39 @@ public class SequentialList<T> {
 
     public int size() {
         return this.size;
+    }
+
+    public SequentialList<Livro> ordenar() {
+        String[] titulos = new String[this.size];
+
+        for (int i = 0; i < this.size; i++) {
+            Livro livro = (Livro) this.get(i);
+            titulos[i] = livro.getTitulo();
+        }
+
+        int n = titulos.length;
+
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (titulos[j].toLowerCase().compareTo(titulos[j + 1].toLowerCase()) > 0) {
+                    String temp = titulos[j];
+                    titulos[j] = titulos[j + 1];
+                    titulos[j + 1] = temp;
+                }
+            }
+        }
+
+        SequentialList<Livro> livrosOrdenados = new SequentialList<Livro>();
+
+        for (int i = 0; i < titulos.length; i++) {
+            for (int j = 0; j < this.size; j++) {
+                Livro livro = (Livro) this.get(j);
+                if (titulos[i].equals(livro.getTitulo())) {
+                    livrosOrdenados.add(livro);
+                }
+            }
+        }
+
+        return livrosOrdenados;
     }
 }
